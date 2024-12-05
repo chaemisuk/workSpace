@@ -1,0 +1,329 @@
+{
+    "version": "0.4",
+    "title": "Coming Soon",
+    "type": "page",
+    "metadata": {
+        "template_type": "single-page",
+        "include_in_zip": "1",
+        "elementor_pro_required": null,
+        "wp_page_template": "elementor_canvas"
+    },
+    "content": [
+        {
+            "id": "1066c6c8",
+            "settings": {
+                "flex_direction": "column",
+                "min_height": {
+                    "unit": "vh",
+                    "size": 100,
+                    "sizes": []
+                },
+                "min_height_tablet": {
+                    "unit": "vh",
+                    "size": "",
+                    "sizes": []
+                },
+                "min_height_mobile": {
+                    "unit": "vh",
+                    "size": "",
+                    "sizes": []
+                },
+                "flex_justify_content": "center",
+                "background_background": "classic",
+                "background_image": {
+                    "url": "https:\/\/askit.dextheme.net\/proyek\/wp-content\/uploads\/sites\/7\/2024\/02\/PP5QMTJ.jpg",
+                    "id": 454,
+                    "size": "",
+                    "alt": "",
+                    "source": "library"
+                },
+                "background_position": "center center",
+                "background_repeat": "no-repeat",
+                "background_size": "cover",
+                "background_overlay_background": "classic",
+                "background_overlay_opacity": {
+                    "unit": "px",
+                    "size": 0.8,
+                    "sizes": []
+                },
+                "padding_mobile": {
+                    "unit": "em",
+                    "top": "6",
+                    "right": "0",
+                    "bottom": "6",
+                    "left": "0",
+                    "isLinked": false
+                },
+                "__globals__": {
+                    "background_overlay_color": "globals\/colors?id=d978516"
+                },
+                "_title": "Coming Soon"
+            },
+            "elements": [
+                {
+                    "id": "5d5c996b",
+                    "settings": {
+                        "content_width": "full",
+                        "title": "Coming Soon!",
+                        "align": "center",
+                        "__globals__": {
+                            "title_color": "globals\/colors?id=primary"
+                        }
+                    },
+                    "elements": [],
+                    "isInner": false,
+                    "widgetType": "heading",
+                    "elType": "widget"
+                },
+                {
+                    "id": "3d21d135",
+                    "settings": {
+                        "content_width": "full",
+                        "ekit_countdown_timer_due_time": "2041-01-31 00:00",
+                        "ekit_countdown_timer_weeks_label": "Weeks",
+                        "ekit_countdown_timer_days_label": "Days",
+                        "ekit_countdown_timer_hours_label": "Hours",
+                        "ekit_countdown_timer_minutes_hours_label": "Minutes",
+                        "ekit_countdown_timer_seconds_hours_label": "Seconds",
+                        "ekit_countdown_timer_title": "Countdown is finished!",
+                        "ekit_countdown_timer_expiry_content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#039;s standard dummy text ever since the 1500s",
+                        "ekit_countdown_timer_days_width_tablet": {
+                            "unit": "px",
+                            "size": 250,
+                            "sizes": []
+                        },
+                        "ekit_countdown_timer_days_height_tablet": {
+                            "unit": "px",
+                            "size": 100,
+                            "sizes": []
+                        },
+                        "ekit_countdown_timer_days_height_mobile": {
+                            "unit": "px",
+                            "size": 100,
+                            "sizes": []
+                        },
+                        "ekit_countdown_timer_days__line_height": {
+                            "unit": "px",
+                            "size": 0,
+                            "sizes": []
+                        },
+                        "ekit_countdown_timer_days__line_height_tablet": {
+                            "unit": "px",
+                            "size": 0,
+                            "sizes": []
+                        },
+                        "ekit_countdown_timer_content_margin_bottom": {
+                            "unit": "px",
+                            "size": 0,
+                            "sizes": []
+                        },
+                        "ekit_countdown_timer_content_margin_bottom_tablet": {
+                            "unit": "px",
+                            "size": 0,
+                            "sizes": []
+                        },
+                        "ekit_countdown_timer_days_label_color": "#FFFFFF",
+                        "ekit_countdown_timer_days_label_border_radious_open": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "0",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": false
+                        },
+                        "ekit_countdown_timer_days_lebel_margin": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "0",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": false
+                        },
+                        "ekit_countdown_timer_days_background_group_background": "classic",
+                        "ekit_countdown_timer_days_border_radious_open": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "0",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": false
+                        },
+                        "ekit_countdown_timer_hours_label_border_radious_open": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "0",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": false
+                        },
+                        "ekit_countdown_timer_hours_lebel_margin": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "0",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": false
+                        },
+                        "ekit_countdown_timer_hours_background_background": "classic",
+                        "ekit_countdown_timer_minutes_label_border_radious_open": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "0",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": false
+                        },
+                        "ekit_countdown_timer_minutes_lebel_margin": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "0",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": false
+                        },
+                        "ekit_countdown_timer_minutes_background_background": "classic",
+                        "ekit_countdown_timer_seconds_label_border_radious_open": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "0",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": false
+                        },
+                        "ekit_countdown_timer_seconds_lebel_margin": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "0",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": false
+                        },
+                        "ekit_countdown_timer_seconds_background_background": "classic",
+                        "_padding_tablet": {
+                            "unit": "em",
+                            "top": "2",
+                            "right": "0",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": false
+                        },
+                        "_padding_mobile": {
+                            "unit": "em",
+                            "top": "2",
+                            "right": "0",
+                            "bottom": "0",
+                            "left": "0",
+                            "isLinked": false
+                        },
+                        "_element_width": "initial",
+                        "_element_custom_width": {
+                            "unit": "%",
+                            "size": 70,
+                            "sizes": []
+                        },
+                        "_element_custom_width_tablet": {
+                            "unit": "%",
+                            "size": 100,
+                            "sizes": []
+                        },
+                        "_element_custom_width_mobile": {
+                            "unit": "%",
+                            "size": "",
+                            "sizes": []
+                        },
+                        "_flex_align_self": "center",
+                        "_background_background": "classic",
+                        "__globals__": {
+                            "ekit_countdown_timer_days_label_background_group_color": "",
+                            "ekit_countdown_timer_days_label_color": "globals\/colors?id=secondary",
+                            "ekit_countdown_timer_days_background_group_color": "globals\/colors?id=dcabff4",
+                            "ekit_countdown_timer_days_digits_typography_group_typography": "globals\/typography?id=b71ca0c",
+                            "ekit_countdown_timer_days_label_typography_group_typography": "globals\/typography?id=650ac5b",
+                            "ekit_countdown_timer_hours_digits_typography_group_typography": "globals\/typography?id=b71ca0c",
+                            "ekit_countdown_timer_hours_digits_color": "globals\/colors?id=secondary",
+                            "ekit_countdown_timer_hours_label_color": "globals\/colors?id=secondary",
+                            "ekit_countdown_timer_hours_label_typography_group_typography": "globals\/typography?id=650ac5b",
+                            "ekit_countdown_timer_hours_background_color": "globals\/colors?id=dcabff4",
+                            "ekit_countdown_timer_days_digits_color": "globals\/colors?id=secondary",
+                            "ekit_countdown_timer_minutes_digits_color": "globals\/colors?id=secondary",
+                            "ekit_countdown_timer_minutes_digits_typography_group_typography": "globals\/typography?id=b71ca0c",
+                            "ekit_countdown_timer_minutes_label_color": "globals\/colors?id=secondary",
+                            "ekit_countdown_timer_minutes_label_typography_group_typography": "globals\/typography?id=650ac5b",
+                            "ekit_countdown_timer_minutes_background_color": "globals\/colors?id=dcabff4",
+                            "ekit_countdown_timer_seconds_digits_color": "globals\/colors?id=secondary",
+                            "ekit_countdown_timer_seconds_digits_typography_group_typography": "globals\/typography?id=b71ca0c",
+                            "ekit_countdown_timer_seconds_label_color": "globals\/colors?id=secondary",
+                            "ekit_countdown_timer_seconds_label_typography_group_typography": "globals\/typography?id=650ac5b",
+                            "ekit_countdown_timer_seconds_background_color": "globals\/colors?id=dcabff4",
+                            "_background_color": "globals\/colors?id=bcacb2b"
+                        }
+                    },
+                    "elements": [],
+                    "isInner": false,
+                    "widgetType": "elementskit-countdown-timer",
+                    "elType": "widget"
+                },
+                {
+                    "id": "54d6c330",
+                    "settings": {
+                        "content_width": "full",
+                        "title": "The Site Under Construction",
+                        "header_size": "h3",
+                        "align": "center",
+                        "__globals__": {
+                            "title_color": "globals\/colors?id=primary"
+                        }
+                    },
+                    "elements": [],
+                    "isInner": false,
+                    "widgetType": "heading",
+                    "elType": "widget"
+                },
+                {
+                    "id": "4415324c",
+                    "settings": {
+                        "content_width": "full",
+                        "editor": "<p>Stay tuned for something Amazing! Subscribe to be Notified<\/p>",
+                        "align": "center",
+                        "__globals__": {
+                            "text_color": "globals\/colors?id=secondary"
+                        }
+                    },
+                    "elements": [],
+                    "isInner": false,
+                    "widgetType": "text-editor",
+                    "elType": "widget"
+                },
+                {
+                    "id": "723cc971",
+                    "settings": {
+                        "content_width": "full",
+                        "mf_form_id": "608***1721825898185",
+                        "_element_width": "initial",
+                        "_element_custom_width": {
+                            "unit": "%",
+                            "size": 52,
+                            "sizes": []
+                        },
+                        "_element_custom_width_mobile": {
+                            "unit": "%",
+                            "size": 100,
+                            "sizes": []
+                        },
+                        "_flex_align_self": "center"
+                    },
+                    "elements": [],
+                    "isInner": false,
+                    "widgetType": "metform",
+                    "elType": "widget"
+                }
+            ],
+            "isInner": false,
+            "elType": "container"
+        }
+    ],
+    "page_settings": {
+        "hide_title": "yes",
+        "template": "elementor_canvas"
+    }
+}
