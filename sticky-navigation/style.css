@@ -1,0 +1,85 @@
+body {
+  font-family: "Anivers W01 Regular";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Anivers W01 Bold";
+}
+
+.example-content {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.example-content::before {
+  display: block;
+  font-size: 48px;
+  font-family: "Anivers W01 Bold";
+  color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.example-content--main {
+  height: 1000px;
+  margin: 15px 0;
+}
+
+.example-content--main::before {
+  content: "Main";
+}
+
+.example-content--header {
+  height: 150px;
+}
+
+.example-content--header::before {
+  content: "Header";
+}
+
+.example-content--footer {
+  height: 200px;
+  margin-top: 15px;
+}
+
+.example-content--footer::before {
+  content: "Footer";
+}
+
+.example-content--section {
+  height: 300px;
+  margin: 5px 0;
+}
+
+.example-content--section:first-child {
+  margin-top: 0;
+}
+
+.example-content--section::before {
+  content: "Section";
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+}
+
+.active {
+  text-decoration: underline;
+}
+
+.nav-wrapper {
+  background-color: #ffffff;
+  padding: 15px 0;
+}
