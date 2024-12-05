@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility Layer Popup</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script><script></script>
+    <script>
+        $(function(){
+        // 전체메뉴
+        btnchk = 0;
+
+        var ww = $(window).width();
+        if(ww > 1279){
+            $(".menu_trigger_wrap").mouseenter(function(){
+                if(btnchk == 0){
+                    $("#header .all_nav").addClass("on");
+                    $(".all_nav").animate({right:0}); 
+                    $("#menu_bg").fadeIn();
+                    btnchk = 1;
+                }else{		
+                    $("#header .all_nav").removeClass("on");
+                    btnchk = 0;
+                }
+            })
+        }else{
+            $(".menu_trigger_wrap").click(function(){
+                if(btnchk == 0){
+                    $("#header .all_nav").addClass("on");
+                    $(".all_nav").animate({right:0}); 
+                    $("#menu_bg").fadeIn();
+                    btnchk = 1;
+                }else{		
+                    $("#header .all_nav").removeClass("on");
+                    btnchk = 0;
+                }
+            })
+        }
+
+        $(".all_nav_close, #menu_bg").click(function(){
+            $(".all_nav").animate({right:-100+"%"});
+            $(".menu-trigger").removeClass("active");
+            $("#menu_bg").fadeOut();
+            btnchk = 0;
+        })
+
+
+
+            // LANGUAGE 메뉴 슬라이드 다운
+            $(".lang_menu").click(function(){
+                $(this).toggleClass("on");
+                $(this).find("ul").slideToggle();
+            });
+        }); 
+
+
+      
+
+    </script>
+   
+
+    <style>
+        body {background-color: #666666;}
+        html,body{width:100%;height:100%;-webkit-font-smoothing: antialiased !important;}
+html{overflow-y:scroll; font-family:"Noto Sans KR", "돋움", dotum, sans-serif;}
+body{*word-break:break-all;-ms-word-break:break-all; font-family:"Noto Sans KR", "돋움", dotum,sans-serif;}
+body,h1,h2,h3,h4,h5,h6,th,td,input,textarea,select,option{color:#555;font-family:"Noto Sans KR", "돋움", dotum, sans-serif;font-size:13px;font-weight:400}
+img,fieldset,iframe{border:0 none}
+ul,ol,li{list-style:none}
+em,address{font-style:normal}
+img,input,select,textarea{vertical-align:middle}
+a{color:#555;text-decoration:none;cursor:pointer}
+a:hover{color:#555; text-decoration:none}
+button,label{cursor:pointer;_cursor /**/:hand}
+button *{position:relative}
+button img{left:-3px;*left:auto}
+textarea{overflow:auto}
+html:first-child select{height:20px;padding-right:6px}
+option{padding-right:6px}
+.input_text, textarea{*margin:-1px 0;padding-right:1px}
+.input_check, .input_radio{width:13px;height:13px}
+.blind, legend, caption{text-indent:-9999px;font-size:0;line-height:0;overflow:hidden}
+hr{display:none}
+legend{*width:0}
+:root legend{margin-top:-1px;font-size:0;line-height:0}
+caption{*line-height:0}
+/*.clear {clear:both;}*/
+.clear:after {
+	clear:both;
+	content: "";
+	display:block;
+}
+#bg{
+	position:fixed;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	background:rgba(0,0,0,0.7);
+	display:none;
+	z-index:1001;
+	}
+
+
+/* header */
+#header {
+	width:100%; position:absolute; height:64px; 
+	top:50px; left:0; z-index:500; padding:0 3%; 
+	box-sizing:border-box; transition:all 0.3s;}
+
+#header .gnb_wrap {width:100%; position:relative; background:none;}
+#header .gnb_wrap .gnb {width:100%;}
+#header .gnb_wrap .gnb:after {content:""; display:block; clear:both;}
+#header .gnb_wrap .gnb h1 {display:inline-block; float:left;}
+#header .gnb_wrap .gnb h1 a {display:block;}
+#header .gnb_wrap .gnb .right {float:right;}
+#header .gnb_wrap .gnb .right .contact_btn {
+	display:inline-block; font-family:"Montserrat";
+	font-size:11px; color:#ffffff; position:absolute; right:210px; top:17px;
+	}
+#header .gnb_wrap .gnb .right .lang_menu {
+	display:inline-block; text-align:left; border:1px solid #ffffff;
+	padding:15px 45px 15px 30px; position:relative; margin-right:60px;
+	box-sizing:border-box; border-radius:20px; cursor:pointer; width:139px;
+	}
+#header .gnb_wrap .gnb .right .lang_menu:after {
+	content:""; display:inline-block; position:absolute; right:23px; top:19px;
+	width:9px; height:6px; background:url("/images/common/lang_arr.png") no-repeat center;
+	transition:all 0.4s; transform:rotate(0deg);
+	}
+#header .gnb_wrap .gnb .right .lang_menu.on:after {transform:rotate(180deg);} 
+#header .gnb_wrap .gnb .right .lang_menu .lang_btn {
+	display:block; font-size:11px; color:#ffffff; font-family:"Montserrat";
+	}
+#header .gnb_wrap .gnb .right .lang_menu .lang_btn img {margin-left:10px;}
+#header .gnb_wrap .gnb .right .lang_menu ul {display:none; }
+#header .gnb_wrap .gnb .right .lang_menu ul li {padding-top:10px;}
+#header .gnb_wrap .gnb .right .lang_menu ul li a {
+	display:block; font-size:11px; color:#ffffff; font-family:"Montserrat";
+	}
+
+
+/* 햄버거 버튼 */
+.all_nav_btn {
+	position:absolute; top:0; right:0;  box-sizing:border-box; background:none; z-index:501; cursor:pointer;}
+.menu_trigger_wrap {width:100%; height:100%; font-size:11px; letter-spacing:0.43px; color:#ffffff; font-family:"Montserrat";}
+.menu-trigger,
+	.menu-trigger span {display : inline-block; box-sizing : border-box; cursor:pointer}
+.menu-trigger {width: 36px; height: 29px; margin: 0 auto; position:relative; margin-bottom:10px; display:block;}
+.menu-trigger span {position : absolute; width : 100%; height : 3px; background-color : #fff; }
+.menu-trigger.active span {background:#fff;}
+.menu-trigger span.n1{top : 0px; left : 0;}
+.menu-trigger.active span.n1 {top:2px;}
+.menu-trigger span.n2{top :13px; right : 0; width:30px;}
+.menu-trigger span.n3{bottom : 0px; left : 0;}
+#header.on .menu-trigger span {background:#ffffff;}
+
+/* 라인이 하나로 합쳐졌다가 엑스자 만들기 */
+.menu-trigger span.n1 {animation : menu-bar01 .75s forwards;}
+@keyframes menu-bar01 {
+	0% {transform : translateY(8.5px) rotate(45deg);}
+	50% {transform : translateY(8.5px) rotate(0);}
+	100% {transform : translateY(0) rotate(0);}
+}
+.menu-trigger span.n2 {transition : all .25s; opacity : 1;}
+.menu-trigger span.n3 {animation : menu-bar02 .75s forwards;}
+@keyframes menu-bar02 {
+	0% {transform : translateY(-9px) rotate(-45deg);}
+	50% {transform : translateY(-9px) rotate(0);}
+	100% {transform : translateY(0) rotate(0);}
+}
+.menu-trigger.active span.n1 {
+	animation :active-menu-bar01 0.75s forwards;
+}
+@keyframes active-menu-bar01 {
+	0% {transform:translateY(0) rotate(0);}
+	50% {transform:translateY(2px) rotate(0);}
+	100% {transform:translateY(7px) rotate(45deg);}
+}
+.menu-trigger.active span.n2 {opacity : 0;}
+.menu-trigger.active span.n3 {animation : active-menu-bar03 .75s forwards; width:100%;}
+@keyframes active-menu-bar03 {
+	0% {transform : translateY(0) rotate(0);}
+	50% {transform : translateY(-5px) rotate(0);}
+	100% {transform : translateY(-5px) rotate(-45deg);}
+}
+
+
+#header .all_nav {
+	display:none; width:80%; position:fixed; 
+	top:0; right:-100%; bottom:0; z-index:1002;
+	}
+#header .all_nav.on {display:block;}
+#header .all_nav a.all_nav_close {
+	display:inline-block; float:right; margin-top:20px;
+	transform:rotate(0deg); transition:all 0.4s; background: #efdd33;
+    border: 1px solid red;
+    width: 50px;
+    height: 50px;
+	}
+#header .all_nav a.all_nav_close:hover {transform:rotate(180deg);}
+#header .all_nav .all_nav_con {
+	background:#ffffff; padding:60px 40px; 
+	box-sizing:border-box; width:100%; height:100%; z-index:1000;
+	overflow-y:auto;
+	}
+#header .all_nav .all_nav_con > ul {display:block; text-align:left; vertical-align:top; position:relative; }
+#header .all_nav .all_nav_con > ul:after {content:""; display:none; width:1px; height:132px; background:rgba(0,0,0,0.1); position:absolute; top:0; right:0;}
+#header .all_nav .all_nav_con > ul:last-child:after {display:none;} 
+#header .all_nav .all_nav_con > ul > li {display:block; border-bottom:1px solid #dddddd; padding:30px 20px; box-sizing:border-box; position:relative;}
+#header .all_nav .all_nav_con > ul > li > a {
+	display:block; font-size:28px; color:#000000; letter-spacing:-0.5px; margin-bottom:10px;
+	font-weight:500; position:relative; box-sizing:border-box; font-family:"Montserrat", "Noto Sans KR";
+	cursor:default;
+	}
+#header .all_nav .all_nav_con > ul > li > a:before {
+	content:""; display:block; width:100px; height:2px; opacity:0;
+	background:#d51c29; position:absolute; top:50%; left:-120px; transition:all 0.4s;
+	}
+#header .all_nav .all_nav_con > ul > li:hover > a:before {opacity:1;}
+#header .all_nav .all_nav_con > ul > li > ul.submenu {display:flex; flex-wrap:wrap; justify-content:flex-start;}
+#header .all_nav .all_nav_con > ul > li > ul.submenu > li {margin-right:20px;}
+#header .all_nav .all_nav_con > ul > li > ul.submenu > li:last-child {margin-right:0;}
+#header .all_nav .all_nav_con > ul > li > ul.submenu > li > a {
+	font-size:18px; color:#888888; display:block; position:relative; 
+	}
+#header .all_nav .all_nav_con > ul > li > ul.submenu > li:hover > a {color:#d51c29;}
+
+#header .all_nav .nav_top {position:relative; overflow:hidden; border-bottom:2px solid #d51c29; padding-bottom:20px;}
+#header .all_nav .nav_top h1 {float:left;}
+#header .all_nav .nav_top h1 > img {width:130px;}
+#header .all_nav .nav_top .m_lang_menu {display:block; position:absolute; right:0; top:0; }
+#header .all_nav .nav_top .m_lang_menu ul {display:block; border:1px solid #d0d0d0; overflow:hidden; padding:6px 10px; box-sizing:border-box; transition:all 0.3s;}
+#header .all_nav .nav_top .m_lang_menu ul li {float:left;}
+#header .all_nav .nav_top .m_lang_menu ul li:first-child:after {content:""; display:inline-block; width:1px; height:14px; background:#d0d0d0; margin:0 10px -3px; transition:all 0.3s;}
+#header .all_nav .nav_top .m_lang_menu ul li a {font-family:"Titillium Web"; font-weight:300; font-size:12px; letter-spacing:-0.5px; color:#a2a2a2; transition:all 0.3s;}
+#header .all_nav .nav_top .m_lang_menu ul li a.on {font-weight:500; color:#666666;}
+
+#menu_bg{
+	position:fixed; left:0; top:0; 
+	width:100%; height:100%;
+	background:rgba(0,0,0,0.7);
+	display:none; z-index:1001;
+	}
+#pop_bg{
+	position:fixed; left:0; top:0; 
+	width:100%; height:100%;
+	background:rgba(0,0,0,0.7);
+	display:none; z-index:1001;
+	}
+
+    .submenu li > a:after { content: ''; position: absolute; bottom: 0; left: 0; transform:scaleX(0); transition: .3s ease-out; width: 100%; height: 5px; background: #cf4520;}
+    .submenu li:hover > a:after { transform:scaleX(1); }
+    .submenu li a {
+    position: relative;
+    padding: 0 50px;
+    font-family: 'Montserrat';
+    font-size: 17px;
+    font-weight: 500;
+    display: block;
+    color: #fff;
+    line-height: 100px;
+    transition: 0.3s;}
+
+    </style>
+
+</head>
+<body>
+    <div id="header">
+        <div id="menu_bg"></div>
+        <div class="gnb_wrap">
+            <div class="gnb">
+                <h1 class="logo"><a href="/"><img src="/images/common/logo.png" alt="NLT"></a></h1>
+                <div class="right">
+                    <a class="contact_btn" href="/m44.php">CONTACT US</a>
+                    <div class="lang_menu">
+                        <a class="lang_btn">KOREAN</a>
+                        <ul>
+                            <li><a class="kr" href="/en">ENGLISH</a></li>
+                            <li><a class="kr" href="/jp">JAPANESE</a></li>
+                        </ul>
+                    </div>
+                    <!-- //lang_menu -->
+                    <div class="all_nav_btn">
+                        <div class="menu_trigger_wrap">
+                            <a class="menu-trigger" href="javascript:;" title="전체메뉴">
+                                <h3 class="blind">전체메뉴</h3>
+                                <span class="n1"> </span>
+                                <span class="n2"> </span>
+                                <span class="n3"> </span>
+                            </a>
+                            MENU
+                        </div>
+                    </div>
+                    <!-- //all_nav_btn -->
+                </div>
+                <!-- //right -->
+            </div>
+            <!-- //gnb -->
+        </div>
+        <!-- //gnb_wrap -->
+        <div class="all_nav">
+           
+            <div class="all_nav_con">
+                <div class="nav_top">
+                    <h1><a href="/"><img src="/images/common/m_logo.png" alt=""></a></h1>
+                    <a class="all_nav_close ptbr"><img src="/images/common/nav_close.png" alt=""></a>
+                    <div class="top_menu mbbr">
+                        <a class="contact_btn" href="/m44.php">CONTACT US</a>
+                        <div class="lang_menu">
+                            <a class="lang_btn">KOREAN</a>
+                            <ul>
+                                <li><a class="kr" href="/en">ENGLISH</a></li>
+                                <li><a class="kr" href="/jp">JAPANESE</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- pc menu -->
+                <ul class="pcmenu">
+                    <li>
+                        <a>회사개요</a>
+                        <ul class="submenu">
+                            <li><a href="/m11.php">기업개요</a></li>
+                            <li><a href="/m12.php">연혁</a></li>
+                            <li><a href="/m13.php">가족사 소개</a></li>
+                            <li><a href="/m14.php">고객사 소개</a></li>
+                            <li><a href="/m15.php">수상 및 인증</a></li>
+                            <li><a href="/m16.php">찾아오시는 길</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a>제품소개</a>
+                        <ul class="submenu">
+                            <li><a href="/m21.php?cate=1&amp;cate2=1">엔진부품</a></li>
+                            <li><a href="/m21.php?cate=2&amp;cate2=1">변속기 및 액슬부품</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a>R&amp;D</a>
+                        <ul class="submenu">
+                            <li><a href="/m31.php">핵심 · 혁신기술</a></li>
+                            <li><a href="/m32.php">생산시스템</a></li>
+                            <li><a href="/m33.php">품질시스템</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a>홍보센터</a>
+                        <ul class="submenu">
+                            <li><a href="/board/board.php?bo_table=report">미디어 리포트</a></li>
+                            <li><a href="/m42.php">E-브로셔</a></li>
+                            <li><a href="/m43.php">CI 가이드</a></li>
+                            <li><a href="/m44.php">온라인문의</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a>인재채용</a>
+                        <ul class="submenu">
+                            <li><a href="/m51.php">인재채용</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- //pc menu -->
+            </div>
+        </div>
+    </div>
+
+
+   
+</body>
+</html>

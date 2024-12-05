@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href=" https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css " >
+    <style>
+        body {margin: 50px;}
+        .thumb { width: 100px; height: 100px; margin: 0.2em -0.7em 0 0;; }
+        .remove_img_preview { position:relative; top:-25px; right:5px; background:black; color:white; border-radius:50px; font-size:0.9em; padding: 0 0.3em 0; text-align:center; cursor:pointer; }
+    </style>
+    
+</head>
+<body>
+    <div class="file-wrapper flie-wrapper-area">
+        <div class="float-left">
+          
+          <input type="file" name="file" id="file" class="upload-box upload-plus" accept="image/*">
+          
+          <div id="preview"></div>
+          
+          <div class="file-edit-icon">
+            <a href="#" class="preview-edit">수정</a>
+            <a href="#" class="preview-de">삭제</a>
+          </div>
+        </div>
+      </div>
+
+
+      <script>
+        console.log()
+
+        function handleFileSelect(event) {
+            var input = this;
+            
+            console.log(input.files)
+
+            if (input.files && input.files.length) {
+
+                var reader = new FileReader();
+                this.enabled = false
+
+                reader.onload = (function (e) {
+                // console.log(e)
+                    $("#preview").html(['<img class="thumb" src="', e.target.result, '" title="', escape(e.name), '"/>'].join(''))
+                });
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        $('#file').change(handleFileSelect);
+
+        $('.file-edit-icon').on('click', '.preview-de', function () {
+            $("#preview").empty()
+            $("#file").val("");
+        });
+
+        $('.preview-edit').click( function() {
+        $("#file").click();
+        } );
+
+
+      </script>
+
+</body>
+</html>
